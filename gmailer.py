@@ -1,5 +1,4 @@
 import argparse
-import email
 import smtplib
 
 from datetime import datetime
