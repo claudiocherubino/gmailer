@@ -1,0 +1,40 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "EmailMessage",
+  "description": "We hope you enjoyed your movie. Please tell us about it.",
+  "action": {
+    "@type": "ReviewAction",
+    "review": {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "Movie",
+        "name": "The Internship",
+        "image": "http://tech.co/wp-content/uploads/2013/02/The-Intership-Movie.jpg"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    "handler": {
+      "@type": "HttpActionHandler",
+      "url": "http://example.com?id=123",
+      "requiredProperty": {
+        "@type": "Property",
+        "name": "review.reviewRating.ratingValue"
+      },
+       "optionalProperty": {
+        "@type": "Property",
+        "name": "review.reviewBody"
+      },
+      "method": "http://schema.org/HttpRequestMethod/POST"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Gmailer"
+  }
+}
+</script>
